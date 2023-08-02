@@ -12,7 +12,7 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="auto" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "好记性不如烂笔头"
+	subtitle = "好记性不如烂笔头~"
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
 
