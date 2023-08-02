@@ -2,10 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://xpt.one/posts/</loc>
+    <lastmod>2023-08-02T14:44:45+08:00</lastmod>
+  </url><url>
+    <loc>http://xpt.one/</loc>
+    <lastmod>2023-08-02T14:44:45+08:00</lastmod>
+  </url><url>
+    <loc>http://xpt.one/posts/%E7%A5%9E%E5%A5%87%E7%9A%84this%E6%8C%87%E5%90%91/</loc>
+    <lastmod>2023-08-02T14:44:45+08:00</lastmod>
+  </url><url>
     <loc>http://xpt.one/categories/</loc>
   </url><url>
     <loc>http://xpt.one/tags/</loc>
-  </url><url>
-    <loc>http://xpt.one/</loc>
   </url>
 </urlset>
