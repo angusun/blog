@@ -2,47 +2,47 @@
 <html><head lang="en">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>神奇的this指向 - 每日一记</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="This指向总结 在JavaScript中，this的指向并不是固定的，而是取决于函数的调用方式。以下是this在不同情况下的指向：
-全局环境：在非严格模式下，this指向全局对象；在严格模式下，this的值为undefined。
-函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的this指向全局对象；而在严格模式下，函数中的this的值为undefined。
-方法调用：当函数作为某个对象的方法被调用时，this指向该对象。
+	<meta name="description" content="This 指向总结 在 JavaScript 中，this 的指向并不是固定的，而是取决于函数的调用方式。以下是 this 在不同情况下的指向：
+全局环境：在非严格模式下，this 指向全局对象；在严格模式下，this 的值为 undefined。
+函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的 this 指向全局对象；而在严格模式下，函数中的 this 的值为 undefined。
+方法调用：当函数作为某个对象的方法被调用时，this 指向该对象。
 这里很有意思，也使我真的懂得了什么是调用决定。
-const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this指向新创建的实例对象。
-箭头函数：箭头函数没有自身的this，它里面的this实际上是继承自外层代码块的this。
-显式绑定：通过call、apply、bind等方法可以显式地设置函数中this的指向。
-事件处理函数：在事件处理函数中，this通常指向触发事件的元素。
-DOM事件监听：addEventListener的回调函数中的this，指向的是绑定事件的元素本身。
-需要注意的是，this的指向是在函数调用时决定的，而不是在函数定义时决定的。" />
+const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this 指向新创建的实例对象。
+箭头函数：箭头函数没有自身的 this，它里面的 this 实际上是继承自外层代码块的 this。
+显式绑定：通过 call、apply、bind 等方法可以显式地设置函数中 this 的指向。
+事件处理函数：在事件处理函数中，this 通常指向触发事件的元素。
+DOM 事件监听：addEventListener 的回调函数中的 this，指向的是绑定事件的元素本身。
+需要注意的是，this 的指向是在函数调用时决定的，而不是在函数定义时决定的。" />
 	<meta property="og:image" content=""/>
 	<meta property="og:title" content="神奇的this指向" />
-<meta property="og:description" content="This指向总结 在JavaScript中，this的指向并不是固定的，而是取决于函数的调用方式。以下是this在不同情况下的指向：
-全局环境：在非严格模式下，this指向全局对象；在严格模式下，this的值为undefined。
-函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的this指向全局对象；而在严格模式下，函数中的this的值为undefined。
-方法调用：当函数作为某个对象的方法被调用时，this指向该对象。
+<meta property="og:description" content="This 指向总结 在 JavaScript 中，this 的指向并不是固定的，而是取决于函数的调用方式。以下是 this 在不同情况下的指向：
+全局环境：在非严格模式下，this 指向全局对象；在严格模式下，this 的值为 undefined。
+函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的 this 指向全局对象；而在严格模式下，函数中的 this 的值为 undefined。
+方法调用：当函数作为某个对象的方法被调用时，this 指向该对象。
 这里很有意思，也使我真的懂得了什么是调用决定。
-const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this指向新创建的实例对象。
-箭头函数：箭头函数没有自身的this，它里面的this实际上是继承自外层代码块的this。
-显式绑定：通过call、apply、bind等方法可以显式地设置函数中this的指向。
-事件处理函数：在事件处理函数中，this通常指向触发事件的元素。
-DOM事件监听：addEventListener的回调函数中的this，指向的是绑定事件的元素本身。
-需要注意的是，this的指向是在函数调用时决定的，而不是在函数定义时决定的。" />
+const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this 指向新创建的实例对象。
+箭头函数：箭头函数没有自身的 this，它里面的 this 实际上是继承自外层代码块的 this。
+显式绑定：通过 call、apply、bind 等方法可以显式地设置函数中 this 的指向。
+事件处理函数：在事件处理函数中，this 通常指向触发事件的元素。
+DOM 事件监听：addEventListener 的回调函数中的 this，指向的是绑定事件的元素本身。
+需要注意的是，this 的指向是在函数调用时决定的，而不是在函数定义时决定的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://xpt.one/posts/%E7%A5%9E%E5%A5%87%E7%9A%84this%E6%8C%87%E5%90%91/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-08-02T14:44:45+08:00" />
 <meta property="article:modified_time" content="2023-08-02T14:44:45+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="神奇的this指向"/>
-<meta name="twitter:description" content="This指向总结 在JavaScript中，this的指向并不是固定的，而是取决于函数的调用方式。以下是this在不同情况下的指向：
-全局环境：在非严格模式下，this指向全局对象；在严格模式下，this的值为undefined。
-函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的this指向全局对象；而在严格模式下，函数中的this的值为undefined。
-方法调用：当函数作为某个对象的方法被调用时，this指向该对象。
+<meta name="twitter:description" content="This 指向总结 在 JavaScript 中，this 的指向并不是固定的，而是取决于函数的调用方式。以下是 this 在不同情况下的指向：
+全局环境：在非严格模式下，this 指向全局对象；在严格模式下，this 的值为 undefined。
+函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的 this 指向全局对象；而在严格模式下，函数中的 this 的值为 undefined。
+方法调用：当函数作为某个对象的方法被调用时，this 指向该对象。
 这里很有意思，也使我真的懂得了什么是调用决定。
-const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this指向新创建的实例对象。
-箭头函数：箭头函数没有自身的this，它里面的this实际上是继承自外层代码块的this。
-显式绑定：通过call、apply、bind等方法可以显式地设置函数中this的指向。
-事件处理函数：在事件处理函数中，this通常指向触发事件的元素。
-DOM事件监听：addEventListener的回调函数中的this，指向的是绑定事件的元素本身。
-需要注意的是，this的指向是在函数调用时决定的，而不是在函数定义时决定的。"/>
+const obj = { name: &#39;sun&#39;, getName: function () { return this.name; }, }; console.log(obj.getName()); // sun const getName = obj.getName; console.log(getName()); // undefined 构造函数：在构造函数中，this 指向新创建的实例对象。
+箭头函数：箭头函数没有自身的 this，它里面的 this 实际上是继承自外层代码块的 this。
+显式绑定：通过 call、apply、bind 等方法可以显式地设置函数中 this 的指向。
+事件处理函数：在事件处理函数中，this 通常指向触发事件的元素。
+DOM 事件监听：addEventListener 的回调函数中的 this，指向的是绑定事件的元素本身。
+需要注意的是，this 的指向是在函数调用时决定的，而不是在函数定义时决定的。"/>
 
 	
         <link href="http://xpt.one/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
@@ -119,22 +119,22 @@ DOM事件监听：addEventListener的回调函数中的this，指向的是绑定
 	<article>
 		<div class="title">
 			<h1 class="title">神奇的this指向</h1>
-			<div class="meta">Posted on Aug 2, 2023 <span class="draft-label">DRAFT</span> </div>
+			<div class="meta">Posted on Aug 2, 2023</div>
 		</div>
 		
 
 		<section class="body">
-			<h2 id="this指向总结">This指向总结</h2>
-<p>在JavaScript中，this的指向并不是固定的，而是取决于函数的调用方式。以下是this在不同情况下的指向：</p>
+			<h2 id="this-指向总结">This 指向总结</h2>
+<p>在 JavaScript 中，this 的指向并不是固定的，而是取决于函数的调用方式。以下是 this 在不同情况下的指向：</p>
 <ol>
 <li>
-<p>全局环境：在非严格模式下，this指向全局对象；在严格模式下，this的值为undefined。</p>
+<p>全局环境：在非严格模式下，this 指向全局对象；在严格模式下，this 的值为 undefined。</p>
 </li>
 <li>
-<p>函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的this指向全局对象；而在严格模式下，函数中的this的值为undefined。</p>
+<p>函数调用：这也分为非严格模式和严格模式。在非严格模式下，函数中的 this 指向全局对象；而在严格模式下，函数中的 this 的值为 undefined。</p>
 </li>
 <li>
-<p>方法调用：当函数作为某个对象的方法被调用时，this指向该对象。</p>
+<p>方法调用：当函数作为某个对象的方法被调用时，this 指向该对象。</p>
 <ol>
 <li>
 <p>这里很有意思，也使我真的懂得了什么是调用决定。</p>
@@ -155,22 +155,22 @@ DOM事件监听：addEventListener的回调函数中的this，指向的是绑定
 </ol>
 </li>
 <li>
-<p>构造函数：在构造函数中，this指向新创建的实例对象。</p>
+<p>构造函数：在构造函数中，this 指向新创建的实例对象。</p>
 </li>
 <li>
-<p>箭头函数：箭头函数没有自身的this，它里面的this实际上是继承自外层代码块的this。</p>
+<p>箭头函数：箭头函数没有自身的 this，它里面的 this 实际上是继承自外层代码块的 this。</p>
 </li>
 <li>
-<p>显式绑定：通过call、apply、bind等方法可以显式地设置函数中this的指向。</p>
+<p>显式绑定：通过 call、apply、bind 等方法可以显式地设置函数中 this 的指向。</p>
 </li>
 <li>
-<p>事件处理函数：在事件处理函数中，this通常指向触发事件的元素。</p>
+<p>事件处理函数：在事件处理函数中，this 通常指向触发事件的元素。</p>
 </li>
 <li>
-<p>DOM事件监听：addEventListener的回调函数中的this，指向的是绑定事件的元素本身。</p>
+<p>DOM 事件监听：addEventListener 的回调函数中的 this，指向的是绑定事件的元素本身。</p>
 </li>
 </ol>
-<p>需要注意的是，this的指向是在函数调用时决定的，而不是在函数定义时决定的。</p>
+<p>需要注意的是，this 的指向是在函数调用时决定的，而不是在函数定义时决定的。</p>
 
 		</section>
 
